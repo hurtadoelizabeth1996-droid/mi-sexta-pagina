@@ -1,0 +1,116 @@
+:root {
+    --rojo: #e63946;
+    --negro: #1a1a1a;
+    --gris-oscuro: #2d2d2d;
+    --blanco: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+/* Navegación */
+header {
+    background-color: #000;
+    padding: 1rem 5%;
+    border-bottom: 3px solid var(--rojo);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--rojo); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--blanco);
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--rojo);
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+}
+
+.btn-main {
+    background: var(--rojo);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Contenedores y Grillas */
+.container { padding: 50px 10%; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--gris-oscuro);
+    padding: 20px;
+    border-left: 5px solid var(--rojo);
+    border-radius: 4px;
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+/* Formularios */
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    background: #333;
+    color: white;
+}
+
+.btn-submit {
+    background: var(--rojo);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
